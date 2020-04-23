@@ -11,13 +11,17 @@
 |
 */
 
+Route::get('/', function(){
+    return view('welcome');
+});
+
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('news/create','Admin/NewsController@add');
+    Route::get('news/create','Admin\NewsController@add');
     
     //課題3
-    Route::get('xxx','Admin/AAAController@bbb');
+    Route::get('xxx','Admin\AAAController@bbb');
     
     //課題4
-    Route::get('profile/create','Admin/ProfileController@add');
-    Route::get('profile/edit','Admin/ProfileController@edit');
+    Route::get('profile/create','Admin\ProfileController@add');
+    Route::get('profile/edit','Admin\ProfileController@edit');
 });
